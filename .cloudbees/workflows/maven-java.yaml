@@ -1,0 +1,17 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: Maven Java
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    steps:
+      - name: Say hello
+        uses: docker://maven:3.9.9-eclipse-temurin-8-focal
+        shell: sh
+        run: |
+          echo "hello world"
