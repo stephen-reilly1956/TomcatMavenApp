@@ -19,4 +19,4 @@ jobs:
         uses: docker://maven:3.9.9-eclipse-temurin-8-focal
         shell: sh
         run: |
-          maven "clean install"
+          mvn clean install
